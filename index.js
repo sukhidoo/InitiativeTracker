@@ -23,13 +23,13 @@ document.addEventListener("dragover", function(event) {
 
 document.addEventListener("drop", function(event) {
   event.preventDefault();
-  dragged.nextElementSibling.classList.add("hidden");
   if (event.target.classList.contains("position")) {
     const dropTarget = event.target;
     const containerRect = dropTarget.getBoundingClientRect();
     const draggedRect = dragged.getBoundingClientRect();
     const offsetX = draggedRect.left - containerRect.left;
     const offsetY = draggedRect.top - containerRect.top;
+    dragged.nextElementSibling.classList.add("hidden");
     dragged.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
     dropTarget.appendChild(dragged);
     var data = event.dataTransfer.getData("text");
