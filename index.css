@@ -40,3 +40,7 @@
   align-items: center;
   font-weight: bold;
 }
+
+img {
+  -webkit-touch-callout: none;
+}
