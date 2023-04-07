@@ -39,9 +39,17 @@ document.addEventListener("drop", function(event) {
     
     if (dragged.classList.contains("repeatable")) {
       const clone = dragged.cloneNode(true);
+      const tokenName = prompt("Enter token name:", "");
+      clone.querySelector(".token-name").innerText = tokenName;
+      if (dragged.parentElement.classList.contains("position") && dropTarget.classList.contains("position")) {
+        dragged.parentElement.removeChild(dragged);
+      }
       dropTarget.appendChild(clone);
-    } else {
+    }else {
       dragged.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+      if (dropTarget.querySelector(".token-container")) {
+        dropTarget.removeChild(dropTarget.querySelector(".token-container"));
+      }
       dropTarget.appendChild(dragged);
     }
     
