@@ -1,4 +1,16 @@
-let dragged;
+let dragged = null;
+
+const toggleButton = document.getElementById("toggle-button");
+const container = document.querySelector("#container");
+
+toggleButton.addEventListener("click", function() {
+  if (container.classList.contains("hidden")) {
+    container.classList.remove("hidden");
+  } else {
+    container.classList.add("hidden");
+  }
+});
+
 
 document.addEventListener("dragstart", function(event) {
   dragged = event.target;
@@ -11,6 +23,7 @@ document.addEventListener("dragover", function(event) {
 
 document.addEventListener("drop", function(event) {
   event.preventDefault();
+  dragged.nextElementSibling.classList.add("hidden");
   if (event.target.classList.contains("position")) {
     const dropTarget = event.target;
     const containerRect = dropTarget.getBoundingClientRect();
@@ -28,12 +41,3 @@ document.addEventListener("drop", function(event) {
     dragged.style.transform = "";
   }
 });
-
-const toggleButton = document.getElementById("toggle-button");
-toggleButton.addEventListener("click", function() {
-  const containers = document.querySelectorAll(".token");
-  containers.forEach(function(container) {
-    container.style.display = container.style.display === "none" ? "block" : "none";
-  });
-});
-
