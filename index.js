@@ -15,8 +15,12 @@ toggleButton.addEventListener("click", function() {
 });
 
 document.addEventListener("dragstart", function(event) {
-  dragged = event.target;
-  event.dataTransfer.setData("text", "");
+  const tokenContainer = event.target.closest(".token-container");
+  
+  if (tokenContainer) {
+    dragged = tokenContainer;
+    const tokenName = dragged.querySelector(".token-name").innerText;
+  }
 });
 
 document.addEventListener("dragover", function(event) {
@@ -35,12 +39,8 @@ document.addEventListener("drop", function(event) {
     
     if (dragged.classList.contains("repeatable")) {
       const clone = dragged.cloneNode(true);
-      clone.classList.add("clone");
-      clone.classList.remove("repeatable");
-      clone.removeAttribute("draggable");
       dropTarget.appendChild(clone);
     } else {
-      dragged.nextElementSibling.classList.add("hidden");
       dragged.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
       dropTarget.appendChild(dragged);
     }
@@ -51,7 +51,7 @@ document.addEventListener("drop", function(event) {
     console.log("Dropped token:", data);
     console.log("Dropped into container:", target);
     console.log("drop event triggered, target element:", event.target);
-    
+
     dragged.style.transform = "";
   }
 });
