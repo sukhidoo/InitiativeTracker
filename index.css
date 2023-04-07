@@ -2,55 +2,67 @@
   display: flex;
   justify-content: space-between;
 }
+
 .hidden {
   display: none !important;
 }
-.token {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-}
-.token repeatable {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-}
-.token-name {
-  text-align: center;
-  margin-top: 5px;
-  font-size: 12px;
-}
-.dragging .token-name {
-  display: none;
-}
-#container2 {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 20px;
-}
-.hidden {
-  display: none !important;
-}
+
 .token {
   width: 150px;
   height: 150px;
   margin: 10px;
 }
+
+.token.repeatable {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+
 .token-name {
   text-align: center;
   margin-top: 5px;
-  font-size: 24px;
+  font-size: 12px;
 }
+
 .dragging .token-name {
   display: none;
+}
+
+#container2 {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.token-name {
+  font-size: 24px;
+}
+
+.token-name2 {
+  text-align: center;
+  margin-top: 160px;
+  font-size: 24px;
 }
 
 #positions {
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+#positions2 {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
   padding-bottom: 20px;
 }
+
+.token-container {
+  border: 2px solid black;
+}
+
 .position {
   width: 75px;
   height: 75px;
@@ -58,10 +70,10 @@
   margin: 5px;
   display: flex;
   justify-content: center;
-   align-items: center;
-   font-weight: bold;
- }
+  align-items: center;
+  font-weight: bold;
+}
 
- img {
-   -webkit-touch-callout: none;
- }
+img {
+  -webkit-touch-callout: none;
+}
