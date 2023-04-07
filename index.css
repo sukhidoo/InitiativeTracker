@@ -1,5 +1,5 @@
 body {
-	background-image: url('./images/');
+	background-image: url('./images/Background.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -50,13 +50,22 @@ body {
   display: flex;
   justify-content: space-between;
   padding-top: 60px;
+  padding-bottom: 60px;
+  margin-right: 80px;
+  margin-left: 80px;
+}
+
+#positions3 {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
   padding-bottom: 20px;
   margin-right: 80px;
   margin-left: 80px;
 }
 
 .token-container {
-  border: 2px solid white;
+  border: 0px solid white;
 }
 
 .position {
