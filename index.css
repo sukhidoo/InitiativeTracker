@@ -55,7 +55,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   margin-right: 80px;
   margin-left: 80px;
 }
@@ -64,7 +64,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   margin-right: 80px;
   margin-left: 80px;
 }
@@ -73,7 +73,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding-top: 60px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   margin-right: 80px;
   margin-left: 80px;
 }
