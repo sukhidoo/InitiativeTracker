@@ -10,6 +10,11 @@
   height: 100px;
   margin: 10px;
 }
+.token repeatable {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
 .token-name {
   text-align: center;
   margin-top: 5px;
@@ -18,15 +23,37 @@
 .dragging .token-name {
   display: none;
 }
+#container2 {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.hidden {
+  display: none !important;
+}
+.token {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+.token-name {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 24px;
+}
+.dragging .token-name {
+  display: none;
+}
+
 #positions {
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 20px;
 }
 .position {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   border: 2px solid black;
   margin: 5px;
   display: flex;
