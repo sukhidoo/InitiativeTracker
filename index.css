@@ -1,39 +1,29 @@
 #container {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-  max-width: 100%;
-  overflow: hidden;
 }
-
 .hidden {
   display: none !important;
 }
-
 .token {
-  max-width: 150px;
-  height: auto;
+  width: 100px;
+  height: 100px;
   margin: 10px;
 }
-
 .token-name {
   text-align: center;
   margin-top: 5px;
   font-size: 12px;
 }
-
 .dragging .token-name {
   display: none;
 }
-
 #positions {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
 .position {
   width: 50px;
   height: 50px;
@@ -41,10 +31,10 @@
   margin: 5px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-weight: bold;
-}
+   align-items: center;
+   font-weight: bold;
+ }
 
-img {
-  -webkit-touch-callout: none;
-}
+ img {
+   -webkit-touch-callout: none;
+ }
