@@ -14,28 +14,6 @@ toggleButton.addEventListener("click", function() {
   }
 });
 
-// added from here to...
-
-document.addEventListener("touchstart", function(event) {
-  const tokenContainer = event.target.closest(".token-container");
-  
-  if (tokenContainer) {
-    dragged = tokenContainer;
-    const tokenName = dragged.querySelector(".token-name").innerText;
-    event.preventDefault(); // prevent default touch behavior
-  }
-});
-
-document.addEventListener("touchmove", function(event) {
-  event.preventDefault(); // prevent default touch behavior
-});
-
-document.addEventListener("touchend", function(event) {
-  event.preventDefault(); // prevent default touch behavior
-});
-
-// ...here
-
 document.addEventListener("dragstart", function(event) {
   const tokenContainer = event.target.closest(".token-container");
   
