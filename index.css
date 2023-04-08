@@ -16,6 +16,18 @@ body {
 	border: 2px solid black;
 }
 
+#next-image-button {
+	text-align: center;
+	background-color: lightgrey;
+	color: blue;
+	font-size: 16px;
+	margin: auto;
+	display: block;
+	width: 70%;
+	height: 30px;
+	border: 2px solid black;
+}
+
 #container {
   display: flex;
   justify-content: space-between;
