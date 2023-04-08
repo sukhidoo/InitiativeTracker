@@ -14,6 +14,31 @@ toggleButton.addEventListener("click", function() {
   }
 });
 
+// Initialize variables
+let currentImageIndex = 1;
+const maxImageIndex = 12;
+
+// Get DOM elements
+const nextImageButton = document.querySelector("#next-image-button");
+const tokenContainer = document.querySelector("#round-token-container");
+
+// Set up click event listener for button
+nextImageButton.addEventListener("click", () => {
+  // Increment current image index
+  currentImageIndex++;
+
+  // If we have reached the maximum image index, disable the button
+  if (currentImageIndex > maxImageIndex) {
+    nextImageButton.disabled = true;
+  }
+
+  // Update image source
+  const imagePath = `./images/${currentImageIndex}.png`;
+  tokenContainer.querySelector(".token").src = imagePath;
+});
+
+
+
 document.addEventListener("dragstart", function(event) {
   const tokenContainer = event.target.closest(".token-container");
   
