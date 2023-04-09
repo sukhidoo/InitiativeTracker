@@ -4,28 +4,68 @@ body {
 	background-size: cover;
 }
 
+#button {
+  padding-top: 13px;
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin: auto;
+}
+
+#button2 {
+  padding-top: 13px;
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin: auto;
+}
+
 #toggle-button {
-	text-align: center;
-	background-color: lightgrey;
-	color: blue;
-	font-size: 16px;
-	margin: auto;
-	display: block;
-	width: 70%;
-	height: 30px;
-	border: 2px solid black;
+  text-align: center;
+  background-color: lightgrey;
+  color: blue;
+  font-size: 16px;
+  width: 49%;
+  height: 30px;
+  border: 2px solid black;
+  cursor: pointer;
+  margin-right: 1%;
+}
+
+#hide-black-squares {
+  text-align: center;
+  background-color: lightgrey;
+  color: blue;
+  font-size: 16px;
+  width: 49%;
+  height: 30px;
+  border: 2px solid black;
+  cursor: pointer;
+  margin-left: 1%;
 }
 
 #next-image-button {
-	text-align: center;
-	background-color: lightgrey;
-	color: blue;
-	font-size: 16px;
-	margin: auto;
-	display: block;
-	width: 70%;
-	height: 30px;
-	border: 2px solid black;
+  text-align: center;
+  background-color: lightgrey;
+  color: blue;
+  font-size: 16px;
+  width: 49%;
+  height: 30px;
+  border: 2px solid black;
+  cursor: pointer;
+  margin-left: 1%;
+}
+
+#prev-image-button {
+  text-align: center;
+  background-color: lightgrey;
+  color: blue;
+  font-size: 16px;
+  width: 49%;
+  height: 30px;
+  border: 2px solid black;
+  cursor: pointer;
+  margin-right: 1%;
 }
 
 #container {
@@ -42,7 +82,9 @@ body {
 .token {
   width: 150px;
   height: 150px;
-  margin: 1px;
+  margin-top: -5px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .token.repeatable {
@@ -57,34 +99,10 @@ body {
   font-size: 24px;
 }
 
-#container2 {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 20px;
-}
-
-#positions {
+#positions, #positions2, #positions3 {
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
-  padding-bottom: 40px;
-  margin-right: 80px;
-  margin-left: 80px;
-}
-
-#positions2 {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 60px;
-  padding-bottom: 40px;
-  margin-right: 80px;
-  margin-left: 80px;
-}
-
-#positions3 {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 60px;
   padding-bottom: 40px;
   margin-right: 80px;
   margin-left: 80px;
@@ -94,10 +112,54 @@ body {
   border: 0px solid white;
 }
 
+.token-container3 {
+  border: 0px solid white;
+  margin-bottom: 38px;
+}
+
+.trash-token {
+  width: 150px;
+  height: 150px;
+  margin-top:-10px;
+  margin-bottom:-5px;
+  margin-left:-25px;
+  margin-right: -25px;
+}
+
+.token-container2 {
+  border: 0px solid white;
+}
+
 .position {
   width: 75px;
   height: 75px;
   border: 2px solid black;
+  margin: 5px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.position-no-border {
+	border: 2px solid transparent;
+}
+
+.position3 {
+  width: 75px;
+  height: 75px;
+  border: 2px solid black;
+  margin: 5px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.position2 {
+  width: 75px;
+  height: 75px;
+  border: 2px solid transparent;
   margin: 5px;
   display: flex;
   justify-content: center;
