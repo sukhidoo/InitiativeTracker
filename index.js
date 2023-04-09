@@ -1,3 +1,41 @@
+const WebSocket = require('ws');
+const wss = new WebSocket.Server({ port: process.env.PORT || 8080 });
+
+const clients = new Set();
+
+wss.on('connection', function connection(ws) {
+  clients.add(ws);
+  ws.send(html);
+});
+
+ws.on('message', function incoming(message) {
+  html = message;
+  clients.forEach(function each(client) {
+    if (client.readyState === WebSocket.OPEN) {
+      client.send(html);
+    }
+  });
+});
+
+const ws = new WebSocket('ws://localhost:8080');
+
+// When the user makes a change, send the updated HTML to the server
+document.addEventListener('keyup', function(event) {
+  ws.send(JSON.stringify({html: document.documentElement.outerHTML}));
+});
+
+ws.onmessage = function(event) {
+  document.documentElement.outerHTML = event.data;
+};
+
+ws.onerror = function(event) {
+  console.error('WebSocket error:', event);
+};
+
+ws.onclose = function(event) {
+  console.log('WebSocket closed:', event);
+};
+
 let dragged = null;
 
 const toggleButton = document.getElementById("toggle-button");
