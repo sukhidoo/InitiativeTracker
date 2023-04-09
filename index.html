@@ -3,79 +3,84 @@
 </head>
 
 <div id="container" class="hidden">
-  <div class="token-container" draggable="true">
+  <div class="token-container" id="1" draggable="true" data-original-index="0">
     <img src="./images/Adrian.png" class="token">
     <div class="token-name">Adrian</div>
   </div>
-  <div class="token-container" draggable="true">
+  <div class="token-container" id="2" draggable="true" data-original-index="1">
     <img src="./images/Elayne.png" class="token">
     <div class="token-name">Elayne</div>
   </div>
-  <div class="token-container" draggable="true">
-    <img src="./images/Inei.png" data-name="Inei" class="token">
+  <div class="token-container" id="3" draggable="true" data-original-index="2">
+    <img src="./images/Inei.png" class="token">
     <div class="token-name">Inei</div>
   </div>
-  <div class="token-container" draggable="true">
+  <div class="token-container" id="4" draggable="true" data-original-index="3">
     <img src="./images/Serena.png" class="token">
     <div class="token-name">Serena</div>
   </div>
-  <div class="token-container" draggable="true">
+  <div class="token-container" id="5" draggable="true" data-original-index="4">
     <img src="./images/Valyra.png" class="token">
     <div class="token-name">Valyra</div>
   </div>
-  <div class="token-container" draggable="true">
+  <div class="token-container" id="6" draggable="true" data-original-index="5">
     <img src="./images/Zorrin.png" class="token">
     <div class="token-name">Zorrin</div>
   </div>
-  <div class="token-container repeatable" draggable="true">
-    <img src="./images/Boss.png" class="token"">
+  <div class="token-container repeatable" draggable="true" data-original-index="6">
+    <img src="./images/Boss.png" class="token">
     <div class="token-name">Boss</div>
   </div>
-  <div class="token-container repeatable" draggable="true">
+  <div class="token-container repeatable" draggable="true" data-original-index="7">
     <img src="./images/Majors.png" class="token">
     <div class="token-name">Majors</div>
   </div>
-  <div class="token-container repeatable" draggable="true">
+  <div class="token-container repeatable" draggable="true" data-original-index="8">
     <img src="./images/Minors.png" class="token">
     <div class="token-name">Minors</div>
   </div>
 </div>
 
 <div id="positions">
-  <div class="position">
-  	<div class="token-container" id="round-token-container" style>
+  <div class="position3">
+  	<div class="token-container2" id="round-token-container">
   		<img src="./images/1.png" class="token">
   	</div>
   </div>
-  <div class="position"></div>
-  <div class="position"></div>
-  <div class="position"></div>
-  <div class="position"></div>
+  <div class="position position-no-border"></div>
+  <div class="position position-no-border"></div>
+  <div class="position position-no-border"></div>
+  <div class="position position-no-border"></div>
 </div>
 
 <div id="positions2">
-  <div class="position"></div>
-  <div class="position"></div>
-  <div class="position"></div>
-  <div class="position"></div>
-  <div class="position"></div>
+  <div class="position position-no-border"></div>
+  <div class="position position-no-border"></div>
+  <div class="position position-no-border"></div>
+  <div class="position position-no-border"></div>
+  <div class="position position-no-border"></div>
 </div>
 
 <div id="positions3">
-  <div class="position"></div>
-  <div class="position"></div>
-  <div class="position"></div>
-  <div class="position"></div>
-  <div class="position"></div>
+  <div class="position position-no-border"></div>
+  <div class="position position-no-border"></div>
+  <div class="position position-no-border"></div>
+  <div class="position position-no-border"></div>
+  <div class="position2">
+  	<div class="token-container3" id="trash-can">
+  		<img src="./images/trash.png" class="trash-token">
+  	</div>
+  </div>
 </div>
 
-<div id=button show>
+<div id="button" show>
 	<button id="toggle-button">Toggle Initiative Tokens</button>
+	<button id="hide-black-squares">Toggle Space Squares</button>
 </div>
 
-<div id=button show>
+<div id="button2" show>
+	<button id="prev-image-button">Previous Round</button>
 	<button id="next-image-button">Next Round</button>
 </div>
-
 
 <script src="index.js"></script>
